@@ -1,1 +1,2 @@
 //your JS code here. If required.
+function findDOMLevel(elementId) { const element = document.getElementById(elementId); if (!element) return -1; // Element with the given id not found let domLevel = 0; let currentNode = element; while (currentNode !== document) { currentNode = currentNode.parentNode; domLevel++; } return domLevel; } const idToFind = 'level'; const domLevel = findDOMLevel(idToFind); console.log(`DOM level of id="${idToFind}": ${domLevel}`);
